@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nintendo Games Trivia - Fernando Z</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+</head>
+<body>
+        <audio id="song" autoplay>
+                <source src="assets/theme.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+        </audio>
+        <button onclick="document.getElementById('song').muted=!document.getElementById('song').muted">Mute/Unmute</button>
+    
+    <div id="jumbo" class="jumbotron">
+        <h1 id="title">Nintendo Video Games Trivia</h1>
+    </div>
+
+    <div id="clock" class="jumbotron">
+        <h1 id="sec-remaining">Seconds Remaining: </h1><br>
+        <span id = "timer"></span>
+        <h3 id="timerHeader"></h3>
+            <div id="totals"></div>
+    </div>
+    <div id = "trivia-main">
+        <div id = "Q1" class="form-check form-check-inline question">
+            <span class="questions">
+                Mario, the famed video game plumber, was named after which person?
+            </span><br>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="q1a1" value="0">
+                <label class="form-check-label" for="q1a1">Mario Lopez</label><br>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="q1a2" value="0">
+                <label class="form-check-label" for="q1a2">Mario Kondo, brother-in-law to the game's designer, Shigeru Miyamoto</label><br>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="q1a3" value="1">
+                <label class="form-check-label" for="q1a3">Mario Segale, landlord of Nintendo's warehouse</label><br>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="q1a4" value="0">   
+                <label class="form-check-label" for="q1a4">Mario Grezzo, Chief Executive of Nintendo Creative Department</label>
+        </div>
+
+        <div id = "Q2"class="form-check form-check-inline question">
+            <span class="questions">
+                What is the best-selling Nintendo game of all time? 
+            </span><br>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="q2a1" value="0">
+                <label class="form-check-label" for="q2a1">Duck Hunt</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="q2a2" value="0">
+                <label class="form-check-label" for="q2a2">Super Mario Bros.</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="q2a3" value="0">
+                <label class="form-check-label" for="q2a3">Mario Kart Wii</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="q2a4" value="1">
+                <label class="form-check-label" for="q2a4">Wii Sports</label>
+        </div>
+
+        <div id = "Q3"class="form-check form-check-inline question">
+                <span class="questions">
+                    Which of the following games did Mario creator Shigeru Miyamoto NOT create?
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="q3a1" value="0">
+                    <label class="form-check-label" for="q3a1">Donkey Kong</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="q3a2" value="1">
+                    <label class="form-check-label" for="q3a2">Kid Icarus</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="q3a3" value="0">
+                    <label class="form-check-label" for="q3a3">Excitebike</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="q3a4" value="0">
+                    <label class="form-check-label" for="q3a4">The Legend of Zelda</label>            
+        </div>
+
+        <div id = "Q4"class="form-check form-check-inline question">
+                <span class="questions">
+                    What was the first game with Princess Zelda as a playable character?
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="q4a1" value="1">
+                    <label class="form-check-label" for="q4a1">Zelda: Wand of Gamelon</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="q4a2" value="0">
+                    <label class="form-check-label" for="q4a2">The Legend of Zelda: Ocarina of Time</label><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="q4a3" value="0">
+                    <label class="form-check-label" for="q4a3">Super Smash Bros. Melee</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="q4a4" value="0">
+                    <label class="form-check-label" for="q4a4">Super Smash Bros. Brawl</label>            
+        </div>
+
+        <div id = "Q5"class="form-check form-check-inline question">
+                <span class="questions">
+                    What is the best-selling Nintendo handheld device of all time? 
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="q5a1" value="0">
+                    <label class="form-check-label" for="q5a1">Nintendo Game Boy</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="q5a2" value="0">
+                    <label class="form-check-label" for="q5a2">Nintendo Game Boy Advance</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="q5a3" value="1">
+                    <label class="form-check-label" for="q5a3">Nintendo DS</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="q5a4" value="0">
+                    <label class="form-check-label" for="q5a4">Nintendo 3DS</label>
+        </div>
+        
+        <div id = "Q6"class="form-check form-check-inline question">
+                <span class="questions">
+                    What was the first Nintendo game to include a 'Save Game' feature?
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="q6a1" value="0">
+                    <label class="form-check-label" for="q6a1">Dragon Warrior</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="q6a2" value="0">
+                    <label class="form-check-label" for="q6a2">Final Fantasy</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="q6a3" value="0">
+                    <label class="form-check-label" for="q6a3">Metroid</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="q6a4" value="1">
+                    <label class="form-check-label" for="q6a4">The Legend of Zelda</label>
+        </div>
+        
+        <div id = "Q7"class="form-check form-check-inline question">
+                <span class="questions">
+                    What was the first Nintendo game to feature Mario in it?  
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="q7a1" value="0">
+                    <label class="form-check-label" for="q7a1">Mario Bos.</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="q7a2" value="0">
+                    <label class="form-check-label" for="q7a2">Tennis</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="q7a3" value="1">
+                    <label class="form-check-label" for="q7a3">Donkey Kong</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="q7a4" value="0">
+                    <label class="form-check-label" for="q7a4">Wrecking Crew</label>        
+        </div>
+        
+        <div id = "Q8"class="form-check form-check-inline question">
+                <span class="questions">
+                    The Mario Bros. antagonist, Bowser, is named after Nintendo's VP of Sales, Doug Bowser:
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="q8a1" value="0">
+                    <label class="form-check-label" for="q8a1">True</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="q8a2" value="1">
+                    <label class="form-check-label" for="q8a2">False</label>
+        </div>
+        
+        <div id = "Q9"class="form-check form-check-inline question">
+                <span class="questions">
+                    Nintendo's Headquarters is located in which country?
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="q1a1" value="0">
+                    <label class="form-check-label" for="q9a1">India</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="q1a2" value="0">
+                    <label class="form-check-label" for="q9a2">China</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="q1a3" value="1">
+                    <label class="form-check-label" for="q9a3">Japan</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="q1a4" value="0">
+                    <label class="form-check-label" for="q9a4">United States</label>            
+        </div>
+        
+        <div id = "Q10"class="form-check form-check-inline question">
+                <span class="questions">
+                    Nintendo is the world's largest video game company by revenue:
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="q10a1" value="1">
+                    <label class="form-check-label" for="q10a1">True</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="q10a2" value="0">
+                    <label class="form-check-label" for="q10a2">False</label>
+        </div>
+        
+        <div id = "Q11"class="form-check form-check-inline question">
+                <span class="questions">
+                    Nintendo translates to:
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="q11a1" value="0">
+                    <label class="form-check-label" for="q11a1">'You only live once'</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="q11a2" value="1">
+                    <label class="form-check-label" for="q11a2">'Leave luck to heaven'</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="q11a3" value="0">
+                    <label class="form-check-label" for="q11a3">'Work to play'</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="q11a4" value="0">
+                    <label class="form-check-label" for="q11a4">'Continue playing'</label>            
+        </div>
+        
+        <div id = "Q12"class="form-check form-check-inline question">
+                <span class="questions">
+                    Nintendo owns which MLB team?
+                </span><br>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="q12a1" value="1">
+                    <label class="form-check-label" for="q12a1">Seattle Mariners</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="q12a2" value="0">
+                    <label class="form-check-label" for="q12a2">Minnesota Twins</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="q12a3" value="0">
+                    <label class="form-check-label" for="q12a3">Chicago White Sox</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="q12a4" value="0">
+                    <label class="form-check-label" for="q12a4">Colorado Rockies</label>
+        </div>           
+        <div style="text-align: center">
+        <img id="icon" src="assets/images/icon.png" width="10%" alt="controller">
+        <img id="icon" src="assets/images/icon.png" width="10%" alt="controller">
+        <img id="icon" src="assets/images/icon.png" width="10%" alt="controller">
+        </div>
+    </div>
+    
+    
+</body>
+</html>
