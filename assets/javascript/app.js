@@ -1,5 +1,4 @@
-$( document ).ready() 
-
+$(document).ready() 
 
 //A variable to hold the timer allotment
 var number = 8;  //!!!! CHANGE TO 30
