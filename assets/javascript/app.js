@@ -1,7 +1,7 @@
 $(document).ready() 
 
 //A variable to hold the timer allotment
-var number = 8;  //!!!! CHANGE TO 30
+var number = 30;  
 
 //A variable to hold the current timer value
 var counter = setInterval(timer, 1000);
@@ -40,20 +40,20 @@ function timer()
     var answer12 = $('input[name=inlineRadioOptions12]:checked').val();
 
     //COMMENT OUT THESE CONSOLE.LOGS
-    console.log("Answered: " + radios.filter(":checked").length);
-    console.log("Individual Answers: ");
-    console.log(answer1);
-    console.log(answer2);
-    console.log(answer3);
-    console.log(answer4);
-    console.log(answer5);
-    console.log(answer6);
-    console.log(answer7);
-    console.log(answer8);
-    console.log(answer9);
-    console.log(answer10);
-    console.log(answer11);
-    console.log(answer12);
+    //console.log("Answered: " + radios.filter(":checked").length);
+    //console.log("Individual Answers: ");
+    //console.log(answer1);
+    //console.log(answer2);
+    //console.log(answer3);
+    //console.log(answer4);
+    //console.log(answer5);
+    //console.log(answer6);
+    //console.log(answer7);
+    //console.log(answer8);
+    //console.log(answer9);
+    //console.log(answer10);
+    //console.log(answer11);
+    //console.log(answer12);
 
 
     //IF ELSE STATEMENTS TO TALLY CORRECT AND INCORRECT
@@ -129,20 +129,16 @@ function timer()
     else if (answer12 == 0) {
         incorrect++;
     }
-    console.log("Correct: " + correct);
-    console.log("Incorrect: " + incorrect);
-    console.log("Unanswered: " + unansweredQuestions);
+    
+    //DELETE THESE CONSOLE.LOGS AFTER DEBUGGING
+    //console.log("Correct: " + correct);
+    //console.log("Incorrect: " + incorrect);
+    //console.log("Unanswered: " + unansweredQuestions);
     
     
     // UPDATE PAGE WITH TOTALS DATA
     $("#totals").html("<h1>" + "All done!" + "</h1>" + "<p><h2>" + "Correct Answers:  " + correct + "</h2></p>" + "<p><h2>" + "Incorrect Answers:  " + incorrect + "</h2></p>" + "<p><h2>" + "Unanswered:  " + unansweredQuestions + "</h2></p>");
-
-
-    
 };
 };
-
-
-
 
 timer();
