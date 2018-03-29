@@ -1,7 +1,7 @@
 $(document).ready() 
 
 //A variable to hold the timer allotment
-var number = 30;  
+var number = 31;  
 
 //A variable to hold the current timer value
 var counter = setInterval(timer, 1000);
